@@ -1,0 +1,25 @@
+name: 'football_insights'
+version: '1.0.0'
+config-version: 2
+
+# Profile name that dbt will look for in profiles.yml
+profile: 'football_profile'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Defining structure: staging and marts
+models:
+  football_insights:
+    staging:
+      +materialized: view  # Staging models should be views for performance
+    marts:
+      +materialized: table # Final tables should be materialized

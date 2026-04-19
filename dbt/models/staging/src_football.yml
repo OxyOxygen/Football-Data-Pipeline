@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw_data
+    schema: public
+    tables:
+      - name: raw_matches
+        description: "Raw football match data ingested from the api."
+        columns:
+          - name: match_id
+            tests:
+              - unique
+              - not_null

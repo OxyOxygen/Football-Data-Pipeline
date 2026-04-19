@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# Secrets
+.env
+
+# Docker
+volumes/
+
+# dbt
+dbt_packages/
+logs/
+target/
+
+# IDE
+.vscode/
+.idea/
